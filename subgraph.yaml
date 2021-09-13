@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: Blitnauts
-repository: https://github.com/knav-eth/n-subgraph
+repository: https://github.com/gaussian-devs/gaussian-protocol-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
