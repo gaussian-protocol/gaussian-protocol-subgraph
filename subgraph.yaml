@@ -1,0 +1,26 @@
+specVersion: 0.0.2
+description: Blitnauts
+repository: https://github.com/knav-eth/n-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: TheGaussianProtocol
+    network: mainnet
+    source:
+      address: '0xdd301bb7734d0e269a614766c00509df735b254c'
+      abi: TheGaussianProtocol
+      startBlock: 13217186
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - N
+      abis:
+        - name: TheGaussianProtocol
+          file: ./abis/TheGaussianProtocol.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/mapping.ts

@@ -1,0 +1,17 @@
+type Gaussian @entity {
+    id: ID!
+    owner: Bytes!
+    creator: Bytes!
+    name: String!
+    first: Int!
+    second: Int!
+    third: Int!
+    fourth: Int!
+    fifth: Int!
+    sixth: Int!
+    seventh: Int!
+    eighth: Int!
+    numbers: [Int]!
+    metadataURI: String!
+    imageURI: String!
+}
