@@ -42,6 +42,15 @@ export class Gaussian extends Entity {
     this.set("id", Value.fromString(value));
   }
 
+  get numericId(): i32 {
+    let value = this.get("numericId");
+    return value.toI32();
+  }
+
+  set numericId(value: i32) {
+    this.set("numericId", Value.fromI32(value));
+  }
+
   get owner(): Bytes {
     let value = this.get("owner");
     return value.toBytes();
@@ -166,5 +175,14 @@ export class Gaussian extends Entity {
 
   set imageURI(value: string) {
     this.set("imageURI", Value.fromString(value));
+  }
+
+  get sum(): i32 {
+    let value = this.get("sum");
+    return value.toI32();
+  }
+
+  set sum(value: i32) {
+    this.set("sum", Value.fromI32(value));
   }
 }

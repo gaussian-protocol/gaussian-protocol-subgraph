@@ -8,6 +8,7 @@ export function handleTransfer(event: Transfer): void {
 
   if (gaussian == null) {
     gaussian = new Gaussian(tokenId.toString())
+    gaussian.numericId = tokenId.toI32()
 
     let contract = TheGaussianProtocol.bind(event.address)
     gaussian.name = "Gaussian #" + tokenId.toString()
@@ -25,6 +26,7 @@ export function handleTransfer(event: Transfer): void {
     gaussian.metadataURI = contract.tokenURI(tokenId)
     gaussian.imageURI = contract.tokenSVG(tokenId)
 
+    gaussian.sum = numbers.reduce<i32>((prev: i32, n: i32) => n + prev, 0)
     gaussian.numbers = numbers
     gaussian.creator = event.params.to
   }

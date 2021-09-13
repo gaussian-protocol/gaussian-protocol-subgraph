@@ -1,5 +1,6 @@
 type Gaussian @entity {
     id: ID!
+    numericId: Int!
     owner: Bytes!
     creator: Bytes!
     name: String!
@@ -14,4 +15,5 @@ type Gaussian @entity {
     numbers: [Int]!
     metadataURI: String!
     imageURI: String!
+    sum: Int!
 }
