@@ -1,5 +1,5 @@
 specVersion: 0.0.2
-description: Blitnauts
+description: The Gaussian Protocol
 repository: https://github.com/gaussian-devs/gaussian-protocol-subgraph
 schema:
   file: ./schema.graphql
