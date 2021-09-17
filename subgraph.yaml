@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: The Gaussian Protocol
-repository: https://github.com/gaussian-devs/gaussian-protocol-subgraph
+repository: https://github.com/gaussian-protocol/gaussian-protocol-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
